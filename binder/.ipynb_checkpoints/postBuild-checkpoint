@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Install a JupyterLab extension for demonstration purposes
-pip3 install nbresuse jupyterlab-git jupyterlab_github jupyterlab-solutions jupyterlab_snippets jupyterlab-quickopen ipyscales plotly pythreejs ipympl bqplot ipywidgets gmaps ipyleaflet
 
-jupyter labextension install --no-build @jupyterlab/celltags @jupyterlab/git @jupyterlab/github @jupyterlab/plotly-extension @jupyterlab/statusbar @jupyterlab/toc @mflevine/jupyterlab_html @quentinandre/jupyterlab_snippets @rmotr/jupyterlab-solutions jupyterlab_bokeh jupyterlab-python-file @enlznep/runall-extension @krassowski/jupyterlab_go_to_definition @lckr/jupyterlab_variableinspector @parente/jupyterlab-quickopen jupyterlab-zip @pyviz/jupyterlab_pyviz @jupyter-widgets/jupyterlab-manager bqplot jupyter-matplotlib jupyterlab-scales jupyterlab-datawidgets jupyter-leaflet jupyterlab-topbar-extension jupyterlab-system-monitor 
+jupyter labextension install --no-build @jupyterlab/celltags @jupyterlab/git @jupyterlab/github @jupyterlab/plotly-extension @jupyterlab/statusbar @jupyterlab/toc @mflevine/jupyterlab_html @quentinandre/jupyterlab_snippets @rmotr/jupyterlab-solutions jupyterlab_bokeh jupyterlab-python-file @enlznep/runall-extension @krassowski/jupyterlab_go_to_definition @lckr/jupyterlab_variableinspector @parente/jupyterlab-quickopen @pyviz/jupyterlab_pyviz @jupyter-widgets/jupyterlab-manager bqplot jupyter-matplotlib jupyterlab-datawidgets jupyter-leaflet jupyterlab-topbar-extension jupyterlab-system-monitor 
 
 jupyter lab build
 
