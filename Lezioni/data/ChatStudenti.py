@@ -61,11 +61,11 @@ class ChatStudente():
     # Funzione per inviare un messaggio ad un nickname destinatario
     def inviaMessaggio(self, destinatario, messaggio):
         self.target_nickname = destinatario.strip().lower().replace(" ", "_").replace("/", "_")
-        client = mqtt.Client()
-        client.on_publish = self.__paho_on_publish 
-        client.connect(self.ip_broker, self.porta_broker, 60)
+        client_sender = mqtt.Client()
+        client_sender.on_publish = self.__paho_on_publish 
+        client_sender.connect(self.ip_broker, self.porta_broker, 60)
         print("Connesso al Broker MQTT su " + self.ip_broker + " - Invio messaggio a: {} .....".format(self.target_nickname), end=" ")
-        client.publish("chat/" + self.target_nickname + "/"+ self.nickname, messaggio)
+        client_sender.publish("chat/" + self.target_nickname + "/"+ self.nickname, messaggio)
     
     # Funzione per avviare il ricevitore dei messaggi (loop infinito)
     def avviaRicevitore(self, funzione_callback_gestione_messaggi_ricevuti):
